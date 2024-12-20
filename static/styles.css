@@ -1,0 +1,503 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "Inknut Antiqua", serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Or use a max-width for larger screens */
+    max-width: 1200px; /* Keeps it centered and limits the width */
+    height: 100px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+.right-nav-section {
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right-nav-section .cart {
+    color: #000000;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+#main-page-button {
+    color: #000000;
+    text-decoration: none;
+}
+#logo {
+    font-family: "Ingrid Darling", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 70px;
+}
+
+.buttons {
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.buttons span a, .navButton {
+    font-family: "Inknut Antiqua", serif;
+    text-decoration: none;
+    color: black;
+}
+
+.buttons span a:hover {
+    border-bottom: 1px solid black;
+}
+
+.navButton {
+    font-size: 18px;
+    font-family: "Inknut Antiqua", serif;
+    padding: 5px 30px;
+    border: 1px solid black;
+    
+}
+
+
+.main-section, footer {
+    width: 100%;
+    max-width: 1200px;
+    height: calc(100vh - 180px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    margin-top: 140px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.right-part {
+    width: 130%;
+}
+.right-part img {
+    max-width: 600px;
+    width: 100%;
+    height: 650px;
+    border-radius: 0 0 0 200px;
+}
+
+.left-part {
+    max-width: 600px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.left-part .big-header {
+    font-family: "Inknut Antiqua", serif;
+    line-height: 160%;
+    font-size: 60px;
+}
+.left-part p {
+    font-family: "Inknut Antiqua", serif;
+    max-width: 60%;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #8e8e8e;
+}
+
+#second, #third {
+    margin-top: 100px;
+}
+
+.big-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.big-container .big-header{
+    font-family: "Inknut Antiqua", serif;
+    font-size: 60px;
+}
+
+.big-container p {
+    color: #8e8e8e;
+    margin-top: -20px;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.big-container .collection-container {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.big-container .collection-container .collection {
+    width: 30%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+.big-container .collection-container .collection img{
+    border-radius: 0 30px 0 30px;
+    width: 350px;
+    height: 250px;
+}
+.big-container .collection-container .collection a {
+    font-family: "Ingrid Darling", cursive;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.177);
+}
+
+#third .right-part img {
+    border-radius: 200px 0 0 0;
+}
+
+#fourth {
+    justify-content: space-between;
+}
+#fourth .right-part {
+    height: 100%;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#fourth .left-part {
+    max-width: 500px;
+}
+#fourth .left-part .big-header {
+    font-size: 70px;
+}
+.card {
+    width: 180px;
+    height: 280px;
+    background-color: #D0D0D0;
+    border-radius: 40px;
+    margin: 5px;
+    padding: 13px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.card .quote {
+    width: 100%;
+    font-weight: 1000;
+    line-height: 200%;
+    font-size: 17px;
+}
+.card .quote-sayer {
+    font-weight: 500;
+    margin-top: auto;
+}
+
+.card .sayer-proffission {
+    margin-top: -10px;
+    font-size: 8px;
+    width: 70%;
+    color: #2e2e2e;
+}
+footer{
+    max-width: calc(100% - 40px);
+    background-color: #353535;
+    margin-top: 100px;
+    max-height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-for-links {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-for-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.sign-form {
+    margin-top: 150px;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+}
+
+.sign-form h1 {
+    font-size: 90px;
+    font-weight: 100;
+}
+.sign-form input {
+    background-color: black;
+    border: 0;
+    outline: none;
+    margin: 5px;
+    width: 100%;
+    height: 70px;
+    font-size: 17px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.sign-form button {
+    font-family: "Inknut Antiqua", serif;
+    margin-top: 30px;
+    font-size: 15px;
+    padding: 1px 20px;
+    color: #ffffff;
+    background-color: #000000;
+    border: 0;
+    border-radius: 5px;
+}
+.error {
+    color: #ff0000;
+}
+
+.sorting-button {
+    padding: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 0;
+    border-radius: 2px;
+    margin: 10px;
+    margin-right: auto;
+}
+
+.white {
+    background-color: white;
+    color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.31);
+}
+
+#main-division-women {
+    margin-top: 140px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#main-division-women h3{
+    font-size: 40px;
+}
+.main-division-top-part {
+    width: 97%;
+}
+#main-division-women .main-division-top-part span {
+    margin-right: auto;
+}
+.main-division-bottom-part {
+    width: 97%;
+    height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.item img{
+    width: 210px;
+    height: 250px;
+    border-radius: 3px;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    color: #000000;
+    text-decoration: none;
+}
+.item .price {
+    font-weight: bold;
+    margin-top: -18px;
+}
+.item button {
+    font-size: 15px;
+    padding: 5px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 0;
+    border-radius: 5px;
+}
+
+.container-for-item-details {
+    margin-top: 140px;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80vh;
+}
+.left-part-item-page, .right-part-item-page {
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.left-part-item-page img {
+    width: 90%;
+    height: 600px;
+    border-radius: 10px;
+}
+
+.right-part-item-page h3 {
+    font-size: 40px;
+
+}
+.right-part-item-page p {
+    font-size: 14px;
+    color: #616161;
+}
+.right-part-item-page span {
+    font-size: 20px;
+    font-weight: 800;
+}
+.right-part-item-page a {
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: 200px;
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+.right-part-item-page .add-to-cart-item-page {
+    background-color: #000000;
+    text-decoration: none;
+    color: white;
+}
+.right-part-item-page .buy-now-item-page {
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.435);
+}
+
+.shopping-cart {
+    margin-top: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cart-item {
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 180px;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.cart-item .right-of-cart-item {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+.right-of-cart-item img {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+}
+.price-and-name {
+    display: flex;
+    flex-direction: column;
+}
+.price-and-name a {
+    font-weight: 800;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000000;
+}
+.checkout-button {
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: auto;
+    padding: 5px 19px;
+}
+.checkout-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.item-checking-details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.order-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.light {
+    font-size: 14px;
+    color: #616161;
+}
+.bold {
+    font-weight: 700;
+}
+
+@media(max-width: 450px){
+    #logo {
+        font-size: 40px;
+    }
+    nav {
+        justify-content: space-around;
+    }
+    .buttons {
+        display: none;
+    }
+    .navButton {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block head %}
+<title>Shopping cart</title>
+{% endblock %}
+{% block content %}
+<div class="shopping-cart">
+    <h1>Shopping cart</h1>
+    {% for item in cart_items %}
+    <div class="cart-item">
+        <div class="right-of-cart-item">
+            <img src="{{ item.image_path}}" alt="">
+            <div class="price-and-name">
+                <a href="/item/{{ item.id }}">{{ item.item_name }}</a>
+                <span class="price">{{ item.item_price }}$</span>
+            </div>
+        </div>
+        <div class="left-of-cart-item">
+            <a href="#">remove from cart</a>
+        </div>
+    </div>
+    {% endfor %} 
+    <a href="/checkout" class="checkout-button">Checkout</a>
+</div>
+{% endblock %}

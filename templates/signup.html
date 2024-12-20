@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block head %}
+<title>Sign up</title>
+{% endblock %}
+{% block content %}
+<form action="/signup" method="post" class="sign-form">
+    <h1>Sign up</h1>
+    <input type="text" id="username" name="username" placeholder="Username">
+    <input type="password" id="password" name="password" placeholder="Password" minlength="8">
+    <input type="password" id="passwordagain" name="passwordagain" placeholder="Password(again)">
+    <button type="submit">Sign up</button>
+    {% if error %}
+    <span class="error"> {{ error }}</span>
+    {% endif %}
+</form>
+{% endblock %}

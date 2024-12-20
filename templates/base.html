@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ingrid+Darling&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Jacquarda+Bastarda+9&family=Jolly+Lodger&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    <nav>
+      <a href="/" id="main-page-button"><h1 id="logo">Golden Glow</h1></a>
+      <div class="buttons">
+        <span>
+          <a href="#" id="women-catalog-button">WOMEN</a>
+        </span>
+        <span>
+          <a href="#" id="men-catalog-button">MEN</a>
+        </span>
+        <span>
+          <a href="#" id="both-catalog-button">BOTH</a>
+        </span>
+       
+      </div>
+      {% if signin %}
+      <!-- Show signup link when on signin page -->
+      <a href="/signup" class="navButton">Sign up</a>
+      {% elif username %}
+      <!-- Show username link when user is logged in -->
+       <div class="right-nav-section">
+        <a href="/shoppingcart/{{ user_id }}" class="fa-solid fa-cart-shopping cart"></a>
+        <a href="/user/{{ user_id }}" class="navButton">{{ username }}</a>
+      </div>
+      {% else %}
+      <!-- Show login link when not on signin page and no user logged in -->
+      <a href="/signin" class="navButton">Login</a>
+      {% endif %}
+    </nav>
+    {% block content %} {% endblock %}
+    <script src="../static/main.js"></script>
+  </body>
+</html>

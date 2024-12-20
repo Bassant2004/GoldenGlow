@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block head %}
+<title>Add Item</title>
+{% endblock %}
+{% block content %}
+<form action="/additem" method="post" class="sign-form" enctype="multipart/form-data">
+    <h1>Add Item</h1>
+    <input type="text" id="item_name" name="item_name" placeholder="item name">
+    <input type="number" id="item_price" name="item_price" placeholder="item price">
+    <input name="item_description" id="item_description" placeholder="item description">
+    <input type="file" name="item_image" id="item_image">
+    <select name="type" id="type">
+        <option value="" disabled selected>Type</option>
+        <option value="ring">Ring</option>
+        <option value="bracelete">Bracelete</option>
+        <option value="necklace">Necklace</option>
+    </select>
+    <select name="gender" id="gender">
+        <option value="" disabled selected>Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="both">Both</option>
+    </select>
+    <button type="submit">Add</button>
+    {% if error %}
+    <span class="error"> {{ error }}</span>
+    {% endif %}
+</form>
+{% endblock %}

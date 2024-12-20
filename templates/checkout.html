@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block head %}
+<title>Checkout</title>
+{% endblock %}
+{% block content %}
+<form action="/checkout" method="post" class="sign-form" style="height: auto;">
+    <h1>Checkout</h1>
+    <span style="margin-right: auto;">address:</span>
+    <input type="text" id="address" name="address" placeholder="Address">
+    <span style="margin-right: auto;">city:</span>
+    <input type="text" id="city" name="city" placeholder="city" minlength="8">
+    <span style="margin-right: auto;">country:</span>
+    <input type="text" id="country" name="country" placeholder="country" minlength="8">
+    <span style="margin-right: auto;">phone number:</span>
+    <input type="text" id="number" name="number" placeholder="number" minlength="8">
+    <div class="checkout-details">
+        {% for item in items_in_cart %}
+        <div class="item-checking-details">
+            <span class="item-name-chekout">{{ item.item_name }}</span>
+            <span>{{ item.item_price }}$</span>
+        </div>
+        {% endfor %}
+        <div class="item-checking-details">
+            <span class="item-name-chekout">Shipping</span>
+            <span>{{ shipping }}$</span>
+        </div>
+        <div class="item-checking-details">
+            <span class="item-name-chekout">total price</span>
+            <span>{{ total_price }}$</span>
+        </div>
+    </div>
+   
+    <button type="submit" style="margin-bottom: 20px;">Place the order</button>
+    {% if error %}
+    <span class="error"> {{ error }}</span>
+    {% endif %}
+</form>
+{% endblock %}

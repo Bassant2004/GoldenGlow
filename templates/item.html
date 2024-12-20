@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block head %}
+<title>{{ item.item_name }}</title>
+{% endblock %}
+{% block content %}
+<div class="container-for-item-details">
+    <div class="left-part-item-page">
+        <img src="{{ item.image_path}}" alt="">
+    </div>
+    <div class="right-part-item-page">
+        <h3 class="item_title">{{ item.item_name }}</h3>
+        <p class="item_details">{{ item.description }}</p>
+        <span>{{item.item_price}} $</span>
+        <a class="add-to-cart-item-page" id="{{ item.id }}" href="/">Add to cart</a>
+        <a class="buy-now-item-page">Buy now</a>
+        <span class="error" style="display: none;" id="error-item-page"></span>
+    </div>
+</div>
+{% endblock %}

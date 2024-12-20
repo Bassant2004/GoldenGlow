@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block head %}
+<title>{{ username }}</title>
+{% endblock %}
+{% block content %}
+<div class="shopping-cart">
+    <h1>Orders</h1>
+    {% for order in user_orders %}
+    <div class="cart-item">
+        <div class="order-container">
+            <span class="bold">Order Number:</span>
+            <span class="light">{{ order.order_number }}</span>
+        </div>
+        <div class="order-container">
+            <span class="bold">shipping address:</span>
+            <span class="light">{{ order.user_address }}</span>
+        </div>
+        <div class="order-container">
+            <span class="bold">total price:</span>
+            <span class="light">{{ order.total_price }}$</span>
+        </div>
+    </div>
+    {% endfor %} 
+    <a href="/logout" class="checkout-button">sign out</a>
+</div>
+{% endblock %}
