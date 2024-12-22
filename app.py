@@ -218,7 +218,8 @@ def shopping_cart(user_id):
             items_in_cart.append(item)
 
     if not items_in_cart:
-        return render_template("shoppingcart.html")
+        return render_template("shoppingcart.html", user_id=user_id, 
+                         username=session.get("username"))
 
     return render_template("shoppingcart.html", 
                          cart_items=items_in_cart, 
@@ -234,15 +235,15 @@ def remove_from_cart(item_id):
 
     user_id = session.get("user_id")
     if not user_id:
-        return jsonify([{"error": "please sign in first"}])
+        return redirect("/sign")
 
     cart_item = CartItem.query.filter_by(item_id=item_id, user_id=user_id).first()
     if cart_item:
         db.session.delete(cart_item)
         db.session.commit()
-        return jsonify([{"success": True, "fail": False}])
+        return redirect(f"/shoppingcart/{user_id}")
 
-    return jsonify([{"error": "item not in cart"}])
+    return "item not in cart"
 
 # ====================================
 # Checkout and Order Routes

@@ -249,6 +249,7 @@ footer{
 .sign-form {
     margin-top: 150px;
     width: 35%;
+    min-width: 300px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -267,6 +268,7 @@ footer{
     outline: none;
     margin: 5px;
     width: 100%;
+    min-width: 300px;
     height: 70px;
     font-size: 17px;
     padding: 10px 20px;
@@ -488,16 +490,136 @@ footer{
 }
 
 @media(max-width: 450px){
+    body {
+        width: 100%;
+    }
     #logo {
         font-size: 40px;
+        min-width: 150px;
     }
     nav {
         justify-content: space-around;
+        width: 100%;
+        left: 50%;
     }
     .buttons {
-        display: none;
+        margin-top: 80px;
+        width: 50px;
+        min-width: 0;
+        width: 40%;
+        justify-content: space-between;
+    }
+    .buttons span a {
+        font-size: 10px;
     }
     .navButton {
-        font-size: 13px;
+        font-size: 10px;
+    }
+    .main-section {
+        margin-left: auto;
+        margin-right: 0;
+        max-width: calc(100% - 40px);
+        flex-direction: column;
+        overflow: hidden;
+        height: auto;
+    }
+    .left-part {
+        padding-left: 20px;
+    }
+    .left-part p {
+        font-size: 10px;
+        max-width: 100%;
+    }
+    .left-part .big-header {
+        margin-top: -100px;
+        font-size: 40px;
+    }
+    .big-container .big-header {
+        font-size: 40px;
+    }
+    .big-container p {
+        font-size: 10px;
+    }
+    .right-part {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;   
+
+    }
+    .collection-container {
+        flex-direction: column;
+    }
+    .right-part img {
+        width: 300px;
+        height: 300px;
+        border-radius: 0 0 0 100px;
+        margin: 20px 0 0 0;
+    }
+    #third {
+        margin-top: 30px;
+        flex-direction: column-reverse;
+        gap: 40px;
+        overflow: hidden;
+    }
+    #third .right-part img {
+        border-radius: 100px 0 0 0;
+    }
+    .card {
+        width: 120px;
+        height: 180px;
+    }
+    .card .quote {
+        font-size: 10px;
+    }
+    .card .quote-sayer {
+        font-weight: 700;
+        font-size: 8px;
+    }
+    .card .sayer-proffission {
+        line-height: 200%;
+        margin-top: 0;
+        font-weight: lighter;
+    }
+    #fourth .left-part .big-header {
+        font-size: 37px;
+        margin-bottom: 50px;
+    }
+    .container-for-links {
+        width: 80%;
+    }
+    .main-division-bottom-part {
+        flex-direction: column;
+        min-height: 40vh;
+        height: auto;
+    }
+    .container-for-item-details {
+        flex-direction: column;
+    }
+    .left-part-item-page, .right-part-item-page {
+        width: calc(100% - 20px);
+    }
+    .left-part-item-page img {
+        width: 97%;
+    }
+    .right-part-item-page {
+        margin-bottom: 500px;
+    }
+    .sign-form h1 {
+        font-size: 50px;
+        width: auto;
+    }
+    .sign-form {
+        margin-top: 200px;
+    }
+    .right-nav-section {
+        min-width: 150px;
+    }
+    .shopping-cart {
+        width: calc(100% - 80px);
+    }
+    .right-of-cart-item img{
+        width: 100px;
+        height: 100px;
     }
 }
