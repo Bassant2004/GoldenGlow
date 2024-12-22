@@ -109,8 +109,14 @@ This application provides a complete e-commerce solution with features including
 - Inventory management
 - Files: additem.html, product management routes in app.py
 
+### Shahd Elshokaly
+- User profile system
+- Order history
+- Database schema design
+- API endpoints implementation
+- Files: user.html, database models in app.py
 
-## Shahd Elshokaly
+## Technologies used
 
 - Backend: Flask (Python)
 - Database: SQLite with SQLAlchemy ORM
