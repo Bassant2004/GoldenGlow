@@ -1,5 +1,6 @@
 # GOLDEN GLOW
-This is an e-commerce web application built with Flask, featuring user authentication, product management, shopping cart functionality, and order processing. The project is designed with a modular architecture allowing for clear separation of concerns among team members.
+This is an e-commerce web application built with Flask, featuring user authentication, product management, shopping cart functionality, and order processing.
+ The project is designed with a modular architecture allowing for clear separation of concerns among team members.
 ### Installation
 #### 1. create a virtual invironment
 - on windows :
@@ -74,49 +75,61 @@ This application provides a complete e-commerce solution with features including
 
 ## Contributors and Responsibilities
 
-### Bassant Khaled 
-- Product catalog implementation
-- Main page layout and design
-- Category filtering system
-- Product sorting functionality
-- Files: index.html, catalog components in main.js
+### Bassant Khaled
+- *Responsibilities*:
+  - User authentication system
+  - Login/Register functionality
+  - Session management
+  - Security implementation
+- *Files*: signin.html, signup.html, authentication routes in app.py
 
 ### Sarah Mohamed
-- User authentication system
-- Login/Register functionality
-- Session management
-- Security implementation
-- Files: signin.html, signup.html, authentication routes in app.py
+- *Responsibilities*:
+  - Checkout process
+  - Order management
+  - Payment integration
+  - Order confirmation system
+- *Files*: checkout.html, order routes in app.py
 
 ### Rony Sherief
-- Shopping cart functionality
-- Cart management
-- Recently viewed items feature
-- Local storage implementation
-- Files: shoppingcart.html, cart-related functions in main.js
+- *Responsibilities*:
+  - Base layout of the site (Header, Footer, etc.)
+  - General site structure
+  - Ensuring responsive design across the app
+- *Files*: base.html, site-wide JavaScript functions
 
 ### Malak Ayman
-- Checkout process
-- Order management
-- Payment integration
-- Order confirmation system
-- Files: checkout.html, order routes in app.py
+- *Responsibilities*:
+  - Shopping cart functionality
+  - Cart management
+  - Recently viewed items feature
+  - Local storage implementation
+- *Files*: cart.html, cart-related functions in main.js
 
-### Mary Sobhi 
-- Admin dashboard
-- Product management interface
-- Image upload functionality
-- Inventory management
-- Files: additem.html, product management routes in app.py
+### Mary Sobhi
+- *Responsibilities*:
+  - Product catalog implementation
+  - Main page layout and design
+  - Category filtering system
+  - Product sorting functionality
+- *Files*: index.html, catalog components in main.js
 
 ### Shahd Elshokaly
-- User profile system
-- Order history
-- Database schema design
-- API endpoints implementation
-- Files: user.html, database models in app.py
+- *Responsibilities*:
+  - Product management interface
+  - Image upload functionality
+  - Inventory management
+- *Files*: additem.html, item.html, product management routes in app.py
 
-## Technologies used
+### Julia
+- *Responsibilities*:
+  - User profile system
+  - Order history
+  - Database schema design
+  - API endpoints implementation
+- *Files*: user.html, database models in app.py
+
+## Technologies Used
 
 - Backend: Flask (Python)
 - Database: SQLite with SQLAlchemy ORM
