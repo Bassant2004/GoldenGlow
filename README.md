@@ -26,13 +26,13 @@ This is an e-commerce web application built with Flask, featuring user authentic
 - on windows :
 
     ```bash 
-    pip install requirements.txt
+    pip install -r requirements.txt
     ```
 
 - on mac :
 
     ```bash 
-    pip3 install requirements.txt
+    pip3 install -r requirements.txt
     ```
 
 #### 3. create the db

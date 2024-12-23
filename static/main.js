@@ -73,8 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Catalog Display Functions
     function setupCatalogDisplay(type) {
-        return (e) => {
-            e.preventDefault();
             mainPage.style.display = "none";
             womenPage.style.display = "flex";
             scrollToTop();
@@ -90,14 +88,35 @@ document.addEventListener("DOMContentLoaded", () => {
                     setupSortButtons(items, displayItems);
                     displayItems(items);
                 });
-        }
+        
     }
 
+    function handleOtherPaths(type) {
+        // Return the event handler function instead of executing it
+        return function(e) {
+            e.preventDefault();
+            if (window.location.pathname !== "/") {
+                window.localStorage.setItem("showItems", type);
+                window.location.href = "/";
+            } else {
+                setupCatalogDisplay(type);
+            }
+        };
+    }
+    
+    // Move localStorage check into a function that runs when the page loads
+    function checkStoredHandler() {
+        const handler = localStorage.getItem("showItems");
+        if (handler) {
+            setupCatalogDisplay(handler);
+            localStorage.removeItem("showItems");
+        }
+    }
     // Event Listeners
-    womenButton.addEventListener("click", setupCatalogDisplay('female'));
-    menButton.addEventListener("click", setupCatalogDisplay('male'));
-    bothButton.addEventListener("click", setupCatalogDisplay('both'));
-
+    womenButton.addEventListener("click", handleOtherPaths('female'));
+    menButton.addEventListener("click", handleOtherPaths('male'));
+    bothButton.addEventListener("click", handleOtherPaths('both'));
+    checkStoredHandler()
     // Add to Cart Functionality
     addToCartButtons.forEach((button) => {
         button.addEventListener("click", (e) => {
